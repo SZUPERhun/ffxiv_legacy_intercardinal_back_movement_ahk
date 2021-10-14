@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #IfWinActive ahk_class FFXIVGAME
 
-*a::
+$a::
 	if (GetKeyState("s"))
 	{
 	Send {ö Down}
@@ -16,12 +16,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 	}
 return
 
-*a Up::
+$a Up::
 	{ö Up}
 	Send {a Up}
 return
 
-*d::
+$d::
 	if (GetKeyState("s"))
 	{
 	Send {ó Down}
@@ -32,7 +32,7 @@ return
 	}
 return
 
-*d Up::
+$d Up::
 	{ó Up}
 	Send {d Up}
 return
