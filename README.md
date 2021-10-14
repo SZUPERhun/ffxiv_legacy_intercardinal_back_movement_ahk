@@ -9,4 +9,7 @@ You can use any keybinds for the last 2. The goal of this script is to saving sp
 Examples:
 
     libma.ahk s a d x y
+    
+or
+
     libma.exe s a d x y
