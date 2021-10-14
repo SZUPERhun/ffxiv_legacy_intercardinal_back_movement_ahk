@@ -1,4 +1,4 @@
-# ffxiv_legacy_intercardinal_back_movement_ahk FFXIV Legacy Intercardinal Back Movement AHK
+# FFXIV Legacy Intercardinal Back Movement AHK
 This script doesn't let you packpedal if you are using Legacy Control Scheme in FFXIV with Strafe Left and Right.
 ## How To Use
 You can either use the AutoHotKey script or use the exe. If you are using the exe, you can use XIVLauncher to automatically start and end it.
