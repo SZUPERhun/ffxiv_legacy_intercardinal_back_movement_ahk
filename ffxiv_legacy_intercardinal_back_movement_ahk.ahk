@@ -17,7 +17,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 *a Up::
-	Send {Shift Up}{Ctrl Up}{ö Up}
+	{ö Up}
 	Send {a Up}
 return
 
@@ -33,6 +33,6 @@ return
 return
 
 *d Up::
-	Send {Shift Up}{Ctrl Up}{ó Up}
+	{ó Up}
 	Send {d Up}
 return
