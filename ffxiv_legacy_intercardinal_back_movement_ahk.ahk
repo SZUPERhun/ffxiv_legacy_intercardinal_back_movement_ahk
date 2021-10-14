@@ -1,5 +1,5 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Enable warnings to assist with detecting common errors.
+; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -8,7 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 *a::
 	if (GetKeyState("s"))
 	{
-	Send {ö Down}
+	Send {Ã¶ Down}
 	}
 	else
 	{
@@ -17,14 +17,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 *a Up::
-	Send {Shift Up}{Ctrl Up}{ö Up}
+	Send {Shift Up}{Ctrl Up}{Ã¶ Up}
 	Send {a Up}
 return
 
 *d::
 	if (GetKeyState("s"))
 	{
-	Send {ó Down}
+	Send {Ã³ Down}
 	}
 	else
 	{
@@ -33,6 +33,6 @@ return
 return
 
 *d Up::
-	Send {Shift Up}{Ctrl Up}{ó Up}
+	Send {Shift Up}{Ctrl Up}{Ã³ Up}
 	Send {d Up}
 return
