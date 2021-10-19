@@ -11,66 +11,66 @@ MoveLeft := A_Args[4]
 MoveRight := A_Args[5]
 Steer := A_Args[6]
 
-Hotkey, %MoveBack%, MoveBackButton
-Hotkey, %MoveBack% Up, MoveBackButtonUp
-Hotkey, %StrafeLeft%, StrafeLeftButton
-Hotkey, %StrafeLeft% Up, StrafeLeftButtonUp
-Hotkey, %StrafeRight%, StrafeRightButton
-Hotkey, %StrafeRight% Up, StrafeRightButtonUp
+Hotkey, *%MoveBack%, MoveBackButton
+Hotkey, *%MoveBack% Up, MoveBackButtonUp
+Hotkey, *%StrafeLeft%, StrafeLeftButton
+Hotkey, *%StrafeLeft% Up, StrafeLeftButtonUp
+Hotkey, *%StrafeRight%, StrafeRightButton
+Hotkey, *%StrafeRight% Up, StrafeRightButtonUp
 return
 
 #IfWinActive ahk_class FFXIVGAME
 
 MoveBackButton:
-	send {%MoveBack% Down}
-	if (GetKeyState(StrafeLeft))
+	send {Blind}{%MoveBack% Down}
+	if (GetKeyState(StrafeLeft, "P"))
 	{
-		send {%StrafeLeft% Up}{%MoveLeft% Down}
+		send {Blind}{%StrafeLeft% Up}{%MoveLeft% Down}
 	}
-	if (GetKeyState(StrafeRight))
+	if (GetKeyState(StrafeRight, "P"))
 	{
-		send {%StrafeRight% Up}{%MoveRight% Down}
+		send {Blind}{%StrafeRight% Up}{%MoveRight% Down}
 	}
 return
 
 MoveBackButtonUp:
-	send {%MoveBack% Up}
-	if (GetKeyState(StrafeLeft))
+	send {Blind}{%MoveBack% Up}
+	if (GetKeyState(StrafeLeft, "P"))
 	{
-		send {%MoveLeft% Up}
+		send {Blind}{%MoveLeft% Up}
 	}
-	if (GetKeyState(StrafeRight))
+	if (GetKeyState(StrafeRight, "P"))
 	{
-		send {%MoveRight% Up}
+		send {Blind}{%MoveRight% Up}
 	}
 return
 
 StrafeLeftButton:
 	if (GetKeyState(MoveBack))
 	{
-		send {%MoveLeft% Down}
+		send {Blind}{%MoveLeft% Down}
 	}
 	else
 	{
-		send {%StrafeLeft% Down}
+		send {Blind}{%StrafeLeft% Down}
 	}
 return
 	
 StrafeLeftButtonUp:
-	send {%MoveLeft% Up}{%StrafeLeft% Up}
+	send {Blind}{%MoveLeft% Up}{%StrafeLeft% Up}
 return
 
 StrafeRightButton:
 	if (GetKeyState(MoveBack))
 	{
-		send {%MoveRight% Down}
+		send {Blind}{%MoveRight% Down}
 	}
 	else
 	{
-		send {%StrafeRight% Down}
+		send {Blind}{%StrafeRight% Down}
 	}
 return
 
 StrafeRightButtonUp:
-	send {%MoveRight% Up}{%StrafeRight% Up}
+	send {Blind}{%MoveRight% Up}{%StrafeRight% Up}
 return
