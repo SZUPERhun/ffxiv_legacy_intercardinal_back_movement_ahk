@@ -48,11 +48,9 @@ StrafeLeftButton:
 	if (GetKeyState(MoveBack))
 	{
 		send {Blind}{%MoveLeft% Down}
+		return
 	}
-	else
-	{
-		send {Blind}{%StrafeLeft% Down}
-	}
+	send {Blind}{%StrafeLeft% Down}
 return
 	
 StrafeLeftButtonUp:
@@ -68,11 +66,9 @@ StrafeRightButton:
 	if (GetKeyState(MoveBack))
 	{
 		send {Blind}{%MoveRight% Down}
+		return
 	}
-	else
-	{
-		send {Blind}{%StrafeRight% Down}
-	}
+	send {Blind}{%StrafeRight% Down}
 return
 
 StrafeRightButtonUp:
