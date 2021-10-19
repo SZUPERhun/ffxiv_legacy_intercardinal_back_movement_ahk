@@ -9,7 +9,6 @@ StrafeLeft := A_Args[2]
 StrafeRight := A_Args[3]
 MoveLeft := A_Args[4]
 MoveRight := A_Args[5]
-Steer := A_Args[6]
 
 Hotkey, *%MoveBack%, MoveBackButton
 Hotkey, *%MoveBack% Up, MoveBackButtonUp
@@ -37,11 +36,11 @@ MoveBackButtonUp:
 	send {Blind}{%MoveBack% Up}
 	if (GetKeyState(StrafeLeft, "P"))
 	{
-		send {Blind}{%MoveLeft% Up}
+		send {Blind}{%MoveLeft% Up}{%StrafeLeft% Down}
 	}
 	if (GetKeyState(StrafeRight, "P"))
 	{
-		send {Blind}{%MoveRight% Up}
+		send {Blind}{%MoveRight% Up}{%StrafeRight% Down}
 	}
 return
 
@@ -57,7 +56,12 @@ StrafeLeftButton:
 return
 	
 StrafeLeftButtonUp:
-	send {Blind}{%MoveLeft% Up}{%StrafeLeft% Up}
+	if (GetKeyState(MoveBack))
+	{
+		send {Blind}{%MoveLeft% Up}
+		return
+	}
+	send {Blind}{%StrafeLeft% Up}
 return
 
 StrafeRightButton:
@@ -72,5 +76,10 @@ StrafeRightButton:
 return
 
 StrafeRightButtonUp:
-	send {Blind}{%MoveRight% Up}{%StrafeRight% Up}
+	if (GetKeyState(MoveBack))
+	{
+		send {Blind}{%MoveRight% Up}
+		return
+	}
+	send {Blind}{%StrafeRight% Up}
 return
