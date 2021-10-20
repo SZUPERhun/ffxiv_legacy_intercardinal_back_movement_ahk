@@ -45,7 +45,7 @@ MoveBackButtonUp:
 return
 
 StrafeLeftButton:
-	if (GetKeyState(MoveBack))
+	if (GetKeyState(MoveBack, "P"))
 	{
 		send {Blind}{%MoveLeft% Down}
 		return
@@ -54,7 +54,7 @@ StrafeLeftButton:
 return
 	
 StrafeLeftButtonUp:
-	if (GetKeyState(MoveBack))
+	if (GetKeyState(MoveBack, "P"))
 	{
 		send {Blind}{%MoveLeft% Up}
 		return
@@ -63,7 +63,7 @@ StrafeLeftButtonUp:
 return
 
 StrafeRightButton:
-	if (GetKeyState(MoveBack))
+	if (GetKeyState(MoveBack, "P"))
 	{
 		send {Blind}{%MoveRight% Down}
 		return
@@ -72,7 +72,7 @@ StrafeRightButton:
 return
 
 StrafeRightButtonUp:
-	if (GetKeyState(MoveBack))
+	if (GetKeyState(MoveBack, "P"))
 	{
 		send {Blind}{%MoveRight% Up}
 		return
